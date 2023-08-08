@@ -1,0 +1,35 @@
+{
+  "name": "@hono-starter-api/cat-topia",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build:app:cat-topia": "node build.js",
+    "start:app:cat-topia": "node .dist/server.js",
+    "start:dev:cat-topia": "nodemon",
+    "start:debug:cat-topia": "nodemon --config nodemon-debug.json",
+    "postinstall": "cp .env-example .env",
+    "test": "node --test --require ts-node/register --require tsconfig-paths/register src/test/*.spec.ts"
+  },
+  "dependencies": {
+    "@hono-starter-api/configuration-provider": "^0.0.1",
+    "@hono-starter-api/error-handling": "^0.0.1",
+    "@hono-starter-api/esbuild-plugin-pino": "^0.0.1",
+    "@hono-starter-api/logger": "^0.0.1",
+    "@hono-starter-api/random-cat-name": "^0.0.1",
+    "@hono-starter-api/request-context": "^0.0.1",
+    "@hono-starter-api/secure-headers": "^0.0.1",
+    "@hono/node-server": "^1.1.0",
+    "hono": "^3.3.4",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "esbuild": "^0.18.17",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "volta": {
+    "node": "18.17.0"
+  }
+}

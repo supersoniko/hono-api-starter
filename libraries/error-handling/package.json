@@ -1,0 +1,35 @@
+{
+  "name": "@hono-starter-api/error-handling",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.1",
+  "main": "./.dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./.dist/index.d.ts",
+      "import": "./.dist/index.js",
+      "require": "./.dist/index.js"
+    }
+  },
+  "scripts": {
+    "build:lib": "tsc --emitDeclarationOnly --declaration && node build.js",
+    "build:lib:watch": "tsc --emitDeclarationOnly --declaration && node build.js --watch"
+  },
+  "devDependencies": {
+    "@hono-starter-api/esbuild-plugin-pino": "^0.0.1",
+    "esbuild": "^0.18.20",
+    "glob": "^10.3.3",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@hono-starter-api/configuration-provider": "^0.0.1",
+    "@hono-starter-api/logger": "^0.0.1"
+  },
+  "peerDependencies": {
+    "hono": "^3.3.4",
+    "zod": "^3.21.4"
+  },
+  "volta": {
+    "node": "18.17.0"
+  }
+}

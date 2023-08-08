@@ -1,0 +1,26 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "start:dev:cat-topia": {
+      "dependsOn": ["build:lib:watch", "build:app:cat-topia"]
+    },
+    "start:debug:cat-topia": {
+      "dependsOn": ["build:lib:watch", "build:app:cat-topia"]
+    },
+    "build:app:cat-topia": {
+      "dependsOn": ["^build:lib", "test"]
+    },
+    "start:app:cat-topia": {
+      "dependsOn": ["build:app:cat-topia"]
+    },
+    "build:lib": {
+      "dependsOn": ["//lint", "^build:esbuild:plugin"]
+    },
+    "build:lib:watch": {
+      "dependsOn": ["//lint", "^build:esbuild:plugin"]
+    },
+    "build:esbuild:plugin": {},
+    "test": {},
+    "//lint": {}
+  }
+}

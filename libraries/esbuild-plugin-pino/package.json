@@ -1,0 +1,19 @@
+{
+  "name": "@hono-starter-api/esbuild-plugin-pino",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.1",
+  "main": "./.dist/index.js",
+  "scripts": {
+    "build:esbuild:plugin": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "esbuild": "^0.18.0"
+  },
+  "volta": {
+    "node": "18.17.0"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "@hono-starter-api/request-context",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.1",
+  "main": "./.dist/index.js",
+  "exports": {
+    "./context": {
+      "types": "./.dist/lib/context.d.ts",
+      "import": "./.dist/lib/context.js",
+      "require": "./.dist/lib/context.js"
+    },
+    "./middleware": {
+      "types": "./.dist/lib/request-id/hono/middleware.d.ts",
+      "import": "./.dist/lib/request-id/hono/middleware.js",
+      "require": "./.dist/lib/request-id/hono/middleware.js"
+    }
+  },
+  "scripts": {
+    "build:lib": "tsc --emitDeclarationOnly --declaration && node build.js",
+    "build:lib:watch": "tsc --emitDeclarationOnly --declaration && node build.js --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.0",
+    "glob": "^10.3.3",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "hono": "^3.3.4"
+  },
+  "volta": {
+    "node": "18.17.0"
+  }
+}
