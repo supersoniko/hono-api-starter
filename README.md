@@ -94,4 +94,4 @@ Go to the Command Pallete (⇧+⌘+P on macOS), and search for the action "Debug
 
 Choose the node process that looks like this: `node --inspect -r ts-node/register -r tsconfig-paths/register ./src/entry-points/api/server.ts`.
 
-View the [VS Code Debug Actions documentation](https://code.visualstudio.com/Docs/editor/debugging#_debug-actions) for more information regarding the use of the their debugger.
+View the [VS Code Debug Actions documentation](https://code.visualstudio.com/Docs/editor/debugging#_debug-actions) for more information regarding the use of their debugger.
