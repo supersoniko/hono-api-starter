@@ -21,7 +21,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'import/no-extraneous-dependencies': [
       'error',
-      { devDependencies: ['**/tests/**', '**/test/**'] },
+      { devDependencies: ['**/tests/**', '**/test/**', '**/build.ts'] },
     ],
     'no-console': ['error', { allow: ['time', 'timeEnd'] }],
     // not sure why we need this if Typescript already enforces it.

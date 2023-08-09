@@ -61,6 +61,7 @@ function transformToObject(
     const destination = (
       outbase ? entrypoint.replace(`${outbase}${separator}`, '') : entrypoint
     ).replace(/.(js|ts)$/, '');
+    // eslint-disable-next-line security/detect-object-injection
     newEntrypoints[destination] = entrypoint;
   }
   return newEntrypoints;
@@ -175,6 +176,7 @@ export function esbuildPluginPino({
         if (pinoBundlerRan) return;
         pinoBundlerRan = true;
 
+        // eslint-disable-next-line security/detect-non-literal-fs-filename
         const contents = await readFile(args.path, 'utf8');
 
         const absoluteOutputPath = `\${process.cwd()}\${require('path').sep}${

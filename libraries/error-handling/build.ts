@@ -1,5 +1,5 @@
-const esbuild = require('esbuild');
-const glob = require('glob');
+import { BuildOptions, build, context } from 'esbuild';
+import { glob } from 'glob';
 
 const entryPoints = glob.sync('./lib/**/*.ts', {
   ignore: ['./lib/**/*.test.ts'],
@@ -11,11 +11,13 @@ const buildConfig = {
   format: 'cjs',
   sourcemap: true,
   outdir: '.dist',
-};
+} as BuildOptions;
 
 async function buildAndWatch() {
-  let ctx = await esbuild.context(buildConfig);
+  const ctx = await context(buildConfig);
   await ctx.watch();
+
+  // eslint-disable-next-line no-console
   console.log('ESBuild: Watching error-handling library for changes');
 }
 
@@ -24,5 +26,5 @@ const args = process.argv.slice(2);
 if (args[0] === '--watch') {
   buildAndWatch().catch(() => process.exit(1));
 } else {
-  esbuild.build(buildConfig).catch(() => process.exit(1));
+  build(buildConfig).catch(() => process.exit(1));
 }

@@ -12,8 +12,8 @@
     }
   },
   "scripts": {
-    "build:lib": "tsc --emitDeclarationOnly --declaration && node build.js",
-    "build:lib:watch": "tsc --emitDeclarationOnly --declaration && node build.js --watch"
+    "build:lib": "tsc --emitDeclarationOnly --declaration && ts-node build.ts",
+    "build:lib:watch": "tsc --emitDeclarationOnly --declaration && ts-node build.ts --watch"
   },
   "devDependencies": {
     "@hono-starter-api/esbuild-plugin-pino": "^0.0.1",
