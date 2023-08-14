@@ -26,8 +26,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-security": "^1.7.1",
     "husky": "^8.0.3",
-    "turbo": "^1.10.12",
-    "typescript": "^5.1.6"
+    "turbo": "^1.10.12"
   },
   "volta": {
     "node": "18.17.0"

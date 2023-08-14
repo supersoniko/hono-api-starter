@@ -21,6 +21,7 @@
     "build:lib:watch": "tsc --emitDeclarationOnly --declaration && ts-node build.ts --watch"
   },
   "devDependencies": {
+    "@hono-starter-api/tsconfig": "^0.0.1",
     "esbuild": "^0.19.0",
     "glob": "^10.3.3",
     "typescript": "^5.1.6"

@@ -1,0 +1,6 @@
+{
+  "name": "@hono-starter-api/tsconfig",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.1"
+}

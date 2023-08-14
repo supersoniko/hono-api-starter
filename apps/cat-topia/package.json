@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@hono-starter-api/esbuild-plugin-pino": "^0.0.1",
+    "@hono-starter-api/tsconfig": "^0.0.1",
     "@types/node": "^20.4.5",
     "esbuild": "^0.18.17",
     "nodemon": "^3.0.1",
