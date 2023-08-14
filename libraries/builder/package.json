@@ -1,0 +1,27 @@
+{
+  "name": "@hono-starter-api/builder",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.1",
+  "exports": {
+    "./build-lib": {
+      "types": "./.dist/build-lib.d.ts",
+      "import": "./.dist/build-lib.js",
+      "require": "./.dist/build-lib.js"
+    }
+  },
+  "scripts": {
+    "build:builder": "ts-node build.ts"
+  },
+  "devDependencies": {
+    "@hono-starter-api/tsconfig": "^0.0.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "esbuild": "^0.18.17",
+    "glob": "^10.3.3"
+  },
+  "volta": {
+    "node": "18.17.0"
+  }
+}
