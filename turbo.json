@@ -14,10 +14,20 @@
       "dependsOn": ["build:app:cat-topia"]
     },
     "build:lib": {
-      "dependsOn": ["//lint", "^build:esbuild:plugin", "build:builder"]
+      "dependsOn": [
+        "//lint",
+        "^build:esbuild:plugin",
+        "^build:builder",
+        "^build:lib"
+      ]
     },
     "build:lib:watch": {
-      "dependsOn": ["//lint", "^build:esbuild:plugin", "build:builder"]
+      "dependsOn": [
+        "//lint",
+        "^build:esbuild:plugin",
+        "^build:builder",
+        "^build:lib"
+      ]
     },
     "build:esbuild:plugin": {},
     "build:builder": {},
