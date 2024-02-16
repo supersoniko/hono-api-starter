@@ -25,7 +25,7 @@
     "@hono-starter-api/logger": "^0.0.1"
   },
   "peerDependencies": {
-    "hono": "^3.3.4",
+    "hono": "^4.0.3",
     "zod": "^3.21.4"
   },
   "volta": {

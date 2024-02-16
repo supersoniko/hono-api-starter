@@ -15,7 +15,7 @@ export const addRequestIdHonoMiddleware =
 
     if (!requestId) {
       requestId = generateRequestId();
-      c.req.headers.set(REQUEST_ID_HEADER, REQUEST_ID_HEADER);
+      c.req.raw.headers.set(REQUEST_ID_HEADER, REQUEST_ID_HEADER);
     }
 
     c.res.headers.set(REQUEST_ID_HEADER, requestId);
