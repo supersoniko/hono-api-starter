@@ -1,4 +1,4 @@
-import { Cat, CatCreationInput } from '@app/domain/cat-schema';
+import { Cat, CatCreationInput, catSchema } from '@app/domain/cat-schema';
 
 // ️️️✅ Best Practice: The function factory pattern - Create functions through a factory that has it's dependencies passed down (IoC)
 export type CatRepository = {
@@ -12,7 +12,8 @@ const cats: Cat[] = [];
 export const catRepositoryFunctionFactory: CatRepositoryFunctionFactory =
   () => ({
     getCats() {
-      return cats;
+      // ️️️✅ Best Practice: Make sure the data is always in the correct shape and unkown properties are stripped
+      return cats.map((cat) => catSchema.parse(cat));
     },
     createCat(input) {
       cats.push({ ...input, id: cats.length + 1 });

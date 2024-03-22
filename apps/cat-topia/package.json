@@ -28,7 +28,8 @@
     "esbuild": "^0.18.17",
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0"
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.6"
   },
   "volta": {
     "node": "20.11.0"
