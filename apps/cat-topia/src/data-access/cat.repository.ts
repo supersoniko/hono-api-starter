@@ -12,7 +12,7 @@ const cats: Cat[] = [];
 export const catRepositoryFunctionFactory: CatRepositoryFunctionFactory =
   () => ({
     getCats() {
-      // ️️️✅ Best Practice: Make sure the data is always in the correct shape and unkown properties are stripped
+      // ️️️✅ Best Practice: Make sure the data is always in the correct shape and unknown properties are stripped
       return cats.map((cat) => catSchema.parse(cat));
     },
     createCat(input) {
