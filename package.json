@@ -6,14 +6,11 @@
     "lint:fix": "eslint '**/*.{js,jsx,ts}' --fix",
     "turbo:start:dev:cat-topia": "turbo run start:dev:cat-topia",
     "turbo:start:debug:cat-topia": "turbo run start:debug:cat-topia",
-    "turbo:build:app:cat-topia": "turbo run build:app:cat-topia",
+    "turbo:build:app:cat-topia": "turbo run build:app:cat-topia --force",
     "turbo:start:app:cat-topia": "turbo run start:app:cat-topia",
     "prepare": "husky install"
   },
-  "workspaces": [
-    "libraries/*",
-    "apps/*"
-  ],
+  "workspaces": ["libraries/*", "apps/*"],
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
     "@commitlint/config-conventional": "^17.6.7",
@@ -29,7 +26,7 @@
     "turbo": "^1.13.0"
   },
   "volta": {
-    "node": "20.11.0"
+    "node": "20.12.2"
   },
   "version": "3.2.0"
 }

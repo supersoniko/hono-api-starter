@@ -25,10 +25,10 @@
     "@hono-starter-api/logger": "^0.0.1"
   },
   "peerDependencies": {
-    "hono": "^4.0.3",
+    "hono": "^4.3.2",
     "zod": "^3.21.4"
   },
   "volta": {
-    "node": "20.11.0"
+    "node": "20.12.2"
   }
 }
