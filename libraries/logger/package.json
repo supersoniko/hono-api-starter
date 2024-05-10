@@ -18,7 +18,8 @@
   "devDependencies": {
     "@hono-starter-api/builder": "^0.0.1",
     "@hono-starter-api/tsconfig": "^0.0.1",
-    "typescript": "^5.1.6"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   },
   "dependencies": {
     "@hono-starter-api/request-context": "^0.0.1",
