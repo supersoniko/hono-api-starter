@@ -7,16 +7,16 @@ app = "cat-topia"
 primary_region = "ams"
 
 [build]
-  dockerfile = "./docker/apps/cat-topia/production/Dockerfile"
+dockerfile = "./docker/apps/cat-topia/production/Dockerfile"
 
 [env]
-  PORT = "8080"
-  PRETTY_PRINT = "YES"
+PORT = "8080"
+PRETTY_PRINT = "YES"
 
 [http_service]
-  internal_port = 8080
-  force_https = true
-  auto_stop_machines = true
-  auto_start_machines = true
-  min_machines_running = 0
-  processes = ["app"]
+internal_port = 8080
+force_https = true
+auto_stop_machines = true
+auto_start_machines = true
+min_machines_running = 0
+processes = ["app"]
