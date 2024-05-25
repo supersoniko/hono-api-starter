@@ -2,28 +2,27 @@ import { MiddlewareHandler } from 'hono';
 import { REQUEST_ID_HEADER, generateRequestId } from '../constant';
 import { requestContext } from '../../context';
 
+function isRequestIdDefined(requestId: unknown): requestId is string {
+  return typeof requestId === 'string' && requestId.length > 0;
+}
+
 /**
- * This is a Hono middleware that:
- * - Generate/Use request id (depending on if you already have one in the request header)
- * - Add it to the request context
+ * Hono middleware to generate or use request ID and add it to the request context.
  *
- * **Important:** this should be your first middleware
+ * **Important:** This should be your first middleware.
  */
-export const addRequestIdHonoMiddleware =
-  (): MiddlewareHandler => async (c, next) => {
-    let requestId = c.get(REQUEST_ID_HEADER);
+export const addRequestIdHonoMiddleware = (): MiddlewareHandler => {
+  return async (c, next) => {
+    const requestIdFromContext = c.get(REQUEST_ID_HEADER) as unknown;
+    const requestId = isRequestIdDefined(requestIdFromContext)
+      ? requestIdFromContext
+      : generateRequestId();
 
-    if (!requestId) {
-      requestId = generateRequestId();
-      c.req.raw.headers.set(REQUEST_ID_HEADER, REQUEST_ID_HEADER);
-    }
-
-    c.res.headers.set(REQUEST_ID_HEADER, requestId);
+    c.header(REQUEST_ID_HEADER, requestId);
 
     const currentContext = requestContext().getStore();
 
     if (currentContext) {
-      // Append to the current context
       currentContext.requestId = requestId;
       await next();
       return;
@@ -31,3 +30,4 @@ export const addRequestIdHonoMiddleware =
 
     await requestContext().run({ requestId }, async () => await next());
   };
+};

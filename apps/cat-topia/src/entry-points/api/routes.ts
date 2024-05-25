@@ -16,7 +16,7 @@ export function defineRoutes(app: Hono) {
   });
 
   cats.post('/', async (c) => {
-    const body = await c.req.json();
+    const body = (await c.req.json()) as unknown;
 
     standardCatCollectionFeature.createCat(body);
 

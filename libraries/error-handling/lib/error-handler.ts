@@ -102,7 +102,7 @@ const normalizeError = (errorToHandle: unknown): AppError => {
     return errorToHandle;
   }
   if (errorToHandle instanceof AppError) {
-    return errorToHandle;
+    return errorToHandle as AppError;
   }
   if (errorToHandle instanceof Error) {
     const appError = new AppError(

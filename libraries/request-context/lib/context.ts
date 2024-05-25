@@ -2,12 +2,12 @@ import { AsyncLocalStorage } from 'node:async_hooks';
 
 let currentContext: AsyncLocalStorage<unknown>;
 
-type DefaultContext = {
+export type DefaultRequestContext = {
   requestId: string;
 };
 
 export function requestContext<
-  T extends DefaultContext,
+  T extends DefaultRequestContext,
 >(): AsyncLocalStorage<T> {
   if (currentContext === undefined) {
     currentContext = new AsyncLocalStorage<T>();
