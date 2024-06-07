@@ -25,6 +25,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-security": "^1.7.1",
     "husky": "^8.0.3",
+    "prettier": "^3.3.1",
     "turbo": "^1.13.0"
   },
   "volta": {
