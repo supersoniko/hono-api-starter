@@ -1,6 +1,6 @@
 {
   "$schema": "https://turborepo.org/schema.json",
-  "pipeline": {
+  "tasks": {
     "start:dev:cat-topia": {
       "dependsOn": ["build:lib:watch", "build:app:cat-topia"]
     },
