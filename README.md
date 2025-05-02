@@ -4,7 +4,7 @@
 
 ## Features
 
-- ✨ Node 20
+- ✨ Node 22
 - 🔹 TypeScript 5
 - ❤️ Monorepo setup with Turbo and npm workspaces
 - 🔥 Auto reloading support for monorepo setup
