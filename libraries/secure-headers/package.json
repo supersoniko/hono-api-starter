@@ -22,7 +22,7 @@
     "typescript": "^5.1.6"
   },
   "peerDependencies": {
-    "hono": "^4.3.2"
+    "hono": "^4.7.8"
   },
   "dependencies": {
     "@hono-starter-api/logger": "^0.0.1"

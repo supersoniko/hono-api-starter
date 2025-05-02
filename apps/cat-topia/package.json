@@ -18,7 +18,7 @@
     "@hono-starter-api/request-context": "^0.0.1",
     "@hono-starter-api/secure-headers": "^0.0.1",
     "@hono/node-server": "^1.1.0",
-    "hono": "^4.3.2",
+    "hono": "^4.7.8",
     "zod": "^3.21.4"
   },
   "devDependencies": {

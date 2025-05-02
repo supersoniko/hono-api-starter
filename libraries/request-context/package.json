@@ -27,7 +27,7 @@
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "hono": "^4.3.2"
+    "hono": "^4.7.8"
   },
   "volta": {
     "node": "22.15.0"
