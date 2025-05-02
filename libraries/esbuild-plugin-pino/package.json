@@ -8,7 +8,7 @@
     "build:esbuild:plugin": "tsc"
   },
   "devDependencies": {
-    "typescript": "^5.4.5"
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "esbuild": "^0.18.0"

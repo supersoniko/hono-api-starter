@@ -12,14 +12,14 @@
     }
   },
   "scripts": {
-    "build:lib": "tsc --emitDeclarationOnly --declaration && ts-node build.ts",
-    "build:lib:watch": "tsc --emitDeclarationOnly --declaration && ts-node build.ts --watch random-cat-name"
+    "build:lib": "tsc --emitDeclarationOnly --declaration && tsx build.ts",
+    "build:lib:watch": "tsc --emitDeclarationOnly --declaration && tsx build.ts --watch random-cat-name"
   },
   "devDependencies": {
     "@hono-starter-api/builder": "^0.0.1",
     "@hono-starter-api/tsconfig": "^0.0.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
   },
   "volta": {
     "node": "22.15.0"

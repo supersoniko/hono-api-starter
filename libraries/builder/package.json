@@ -11,12 +11,12 @@
     }
   },
   "scripts": {
-    "build:builder": "ts-node build.ts"
+    "build:builder": "tsx build.ts"
   },
   "devDependencies": {
     "@hono-starter-api/tsconfig": "^0.0.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "esbuild": "^0.18.17",
